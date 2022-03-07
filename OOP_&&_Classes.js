@@ -88,6 +88,141 @@ const me = new Person ('Anthony',26,'Brown','Black');
 
 console.log(me); 
 
+me.hair = 'red'; 
+
+console.log(me); 
+
+class Person {
+    constructor(name, age, eyes, hair){
+        this.lesgs = 2; 
+        this.arms = 2; 
+        this.name = name; 
+        this.age = age; 
+        this. eyes = eyes; 
+        this.hair = hair;
+}
+setHair(haircolor){
+    this.hair = haircolor; 
+}
+greet(otherperson){
+    console.log('hi ' + otherperson + ' !'); 
+}
+jump(){
+    console.log('weeeeeee!'); 
+
+}
+
+};
+
+const me = new Person('Anthony', 26, 'Brown', "Black")
+
+console.log(me); 
+
+me.setHair('Green')
+
+console.log(me); 
+
+class Account {
+    constructor(Savings, Checkings, Funds =100, ){
+        this.Savings = Savings; 
+        this.Checkings = Checkings; 
+        this.Funds = Funds; 
+    }
+    dateOpen(){
+
+        let d; 
+
+        d = new Date(); 
+
+        console.log(d.toString()); 
+
+    }
+    withdraw(amount){
+
+        if(amount <=this.Funds){
+            amount-= this.Funds
+        }
+        console.log(`Withdrawn: ${amount} Current balance: ${this.Funds}`); 
+    
+    }
+}
+
+    console.log(Account.withdraw(10))
+
+
+
+
+
+
+d = new Date(); 
+
+console.log(d.toString()); 
+
+
+class Person {
+    constructor (name,age, eyes, hair){
+        this.legs = 2;
+        this.arms = 2; 
+        this.name = name; 
+        this.age = age; 
+        this.eyes = eyes; 
+        this.hair = hair; 
+    }
+    setHairColor(haircolor){
+        this.hair = haircolor; 
+    }
+    greet(otherperson){
+        console.log('hi ' + otherperson + ' !');
+    }
+    jump(){
+        console.log('weee!');
+    }
+}
+
+class SuperHero extends Person {
+
+    fly(){
+        console.log('Up Up and Away !')
+    }
+}; 
+
+const superman = new SuperHero('Clark',23,'Blue', 'Black'); 
+
+superman.fly(); 
+
+
+class Person {
+    constructor (name,age, eyes, hair){
+        this.legs = 2;
+        this.arms = 2; 
+        this.name = name; 
+        this.age = age; 
+        this.eyes = eyes; 
+        this.hair = hair; 
+    }
+    setHairColor(haircolor){
+        this.hair = haircolor; 
+    }
+    greet(otherperson){
+        console.log('hi ' + otherperson + ' !');
+    }
+    jump(){
+        console.log('weee!');
+    }
+}
+class SuperHero extends Person {
+    fly(){
+        console.log('Up Up and Away !')
+    }
+    greet(otherperson){
+        console.log('Greetings ' + otherperson + ' !')
+    }
+};
+
+const superman = new SuperHero('Clark',23,'Blue', 'Black'); 
+
+superman.greet('Bob'); 
+
 
 
 
