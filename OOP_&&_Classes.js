@@ -223,7 +223,45 @@ const superman = new SuperHero('Clark',23,'Blue', 'Black');
 
 superman.greet('Bob'); 
 
+class Person {
+    constructor (name,age, eyes, hair){
+        this.legs = 2;
+        this.arms = 2; 
+        this.name = name; 
+        this.age = age; 
+        this.eyes = eyes; 
+        this.hair = hair; 
+    }
+    setHairColor(haircolor){
+        this.hair = haircolor; 
+    }
+    greet(otherperson){
+        console.log('hi ' + otherperson + ' !');
+    }
+    jump(){
+        console.log('weee!');
+    }
+}
 
+class SuperHero extends Person {
+    constructor(name,age,eyes,hair){
+        super(name,age,eyes,hair);
+        this.superPowers = ['flight', 'superhuman strength', 'x-ray vision', 'heat vision', 'cold breath', 'super-speed', 'enhanced hearing', 'nigh-invulnerability']
+    }
+    fly(){
+        console.log('Up Up And Away ')
+    }
+    greeting(otherperson){
+        console.log('Hi ' + otherperson + ' !')
+    }
+    jump(){
+        super.jump();
+        this.fly();
+    }
+}
 
+const superman = new SuperHero ('Clark',23,'Blue', 'Black');
 
+console.log(superman); 
 
+console.log(superman.superPowers)
